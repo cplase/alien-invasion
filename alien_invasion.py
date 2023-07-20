@@ -2,7 +2,7 @@ import sys
 import pygame
 
 from settings import Settings
-from ship import Ship
+from toon import Toon
 
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
@@ -21,7 +21,7 @@ class AlienInvasion:
 
         pygame.display.set_caption("Alien Invasion!")
 
-        self.ship = Ship(self)
+        self.toon = Toon(self)
 
     def run_game(self):
         """Start the main loop for the game."""
@@ -44,8 +44,8 @@ class AlienInvasion:
         # Redraw the screen.
         self.screen.fill(self.settings.bg_color)
 
-        # Draw the ship.
-        self.ship.blitme()
+        # Draw the toon.
+        self.toon.blitme()
 
         # Draw new frame.
         pygame.display.flip()
